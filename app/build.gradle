@@ -142,13 +142,13 @@ dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    implementation "com.squareup.okhttp3:okhttp:4.2.2"
+    implementation "com.squareup.okhttp3:okhttp:4.5.0"
     implementation "com.squareup.okhttp3:logging-interceptor:4.2.2"
     implementation "com.squareup.picasso:picasso:2.71828"
-    implementation "com.squareup.retrofit2:retrofit:2.6.0"
+    implementation "com.squareup.retrofit2:retrofit:2.8.1"
     implementation "com.squareup.retrofit2:adapter-rxjava:2.3.0"
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.6.0"
-    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.6.2"
     implementation "com.squareup.retrofit2:converter-scalars:2.3.0"
 
     implementation "com.readystatesoftware.chuck:library:1.1.0"
@@ -189,7 +189,19 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0"
 
     // library frogo-recycler-view
-    implementation 'com.github.amirisback:frogo-recycler-view:2.1.2'
+    implementation 'com.github.amirisback:frogo-recycler-view:2.1.3'
+
+    // library consumable code movie tmdb api
+    implementation 'com.github.amirisback:consumable-code-movie-tmdb-api:1.0.9'
+
+    // library consumable code the sport db api
+    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.5'
+
+    // library consumable code pixabay api
+    implementation 'com.github.amirisback:consumable-code-pixabay-api:1.0.1'
+
+    // library consumable code the meal db api
+    implementation 'com.github.amirisback:consumable-code-the-meal-db-api:1.0.1'
 
     // library consumable code news api
     implementation 'com.github.amirisback:consumable-code-news-api:1.0.3'
