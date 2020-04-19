@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".consumable.themealdbapi.MealActivity"></activity>
+        <activity android:name=".consumable.themealdbapi.MealActivity"/>
         <activity android:name=".consumable.thesportdbapi.SportActivity" />
         <activity android:name=".consumable.themoviedbapi.MovieActivity" />
         <activity android:name=".consumable.pixabayapi.PixabayActivity" />

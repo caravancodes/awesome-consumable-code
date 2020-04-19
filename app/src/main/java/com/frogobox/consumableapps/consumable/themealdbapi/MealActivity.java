@@ -2,11 +2,10 @@ package com.frogobox.consumableapps.consumable.themealdbapi;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.frogobox.consumableapps.R;
+import com.frogobox.consumableapps.base.BaseActivity;
 
-public class MealActivity extends AppCompatActivity {
+public class MealActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -2,11 +2,10 @@ package com.frogobox.consumableapps.consumable.themoviedbapi;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.frogobox.consumableapps.R;
+import com.frogobox.consumableapps.base.BaseActivity;
 
-public class MovieActivity extends AppCompatActivity {
+public class MovieActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
