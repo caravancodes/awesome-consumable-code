@@ -9,19 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".consumable.themealdbapi.MealActivity"></activity>
+        <activity android:name=".consumable.thesportdbapi.SportActivity" />
+        <activity android:name=".consumable.themoviedbapi.MovieActivity" />
+        <activity android:name=".consumable.pixabayapi.PixabayActivity" />
+        <activity android:name=".consumable.newsapi.NewsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        </activity> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_publisher_id"/>
-
+            android:value="@string/admob_publisher_id" />
     </application>
 
 </manifest>
