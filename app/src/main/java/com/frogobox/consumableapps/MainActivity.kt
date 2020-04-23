@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import com.frogobox.consumableapps.base.BaseActivity
 import com.frogobox.consumableapps.consumable.newsapi.NewsActivity
+import com.frogobox.consumableapps.consumable.thesportdbapi.SportActivity
 import com.frogobox.frogonewsapi.ConsumeNewsApi
 import com.frogobox.frogonewsapi.callback.NewsResultCallback
 import com.frogobox.frogonewsapi.data.response.ArticleResponse
@@ -60,7 +61,15 @@ class MainActivity : BaseActivity() {
                 R.drawable.ic_launcher_background,
                 "News Api",
                 "https://github.com/amirisback/consumable-code-news-api",
-                "1"
+                0
+            )
+        )
+        listData.add(
+            Library(
+                R.drawable.ic_launcher_background,
+                "Sport",
+                "https://github.com/amirisback/consumable-code-news-api",
+                1
             )
         )
         listData.add(
@@ -68,15 +77,7 @@ class MainActivity : BaseActivity() {
                 R.drawable.ic_launcher_background,
                 "News Api",
                 "https://github.com/amirisback/consumable-code-news-api",
-                "1"
-            )
-        )
-        listData.add(
-            Library(
-                R.drawable.ic_launcher_background,
-                "News Api",
-                "https://github.com/amirisback/consumable-code-news-api",
-                "1"
+                2
             )
         )
 
@@ -90,7 +91,35 @@ class MainActivity : BaseActivity() {
             null,
             object : FrogoAdapterCallback<Library> {
                 override fun onItemClicked(data: Library) {
-                    startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+
+                    when (data.code) {
+                        0 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                        1 -> {
+                            startActivity(Intent(this@MainActivity, SportActivity::class.java))
+                        }
+                        2 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                        3 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                        4 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                        5 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                        6 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                        7 -> {
+                            startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                        }
+                    }
+
+
                 }
 
                 override fun onItemLongClicked(data: Library) {

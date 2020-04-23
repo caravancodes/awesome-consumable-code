@@ -19,5 +19,5 @@ data class Library(
     val image: Int,
     val name: String,
     val link: String,
-    val code: String
+    val code: Int
 )
