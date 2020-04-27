@@ -6,17 +6,15 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.frogobox.consumableapps.R
 import com.frogobox.consumableapps.base.BaseActivity
-import com.frogobox.frogonewsapi.ConsumeNewsApi
 import com.frogobox.frogonewsapi.callback.NewsResultCallback
 import com.frogobox.frogonewsapi.data.model.Article
 import com.frogobox.frogonewsapi.data.response.ArticleResponse
 import com.frogobox.frogonewsapi.util.NewsConstant
-import com.frogobox.frogonewsapi.util.NewsUrl
 import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
 import kotlinx.android.synthetic.main.activity_news.*
-import kotlinx.android.synthetic.main.content_article_vertical.view.*
-import kotlinx.android.synthetic.main.content_category.view.*
-import kotlinx.android.synthetic.main.content_list_main.view.tv_title
+import kotlinx.android.synthetic.main.list_main.view.tv_title
+import kotlinx.android.synthetic.main.list_news_article_vertical.view.*
+import kotlinx.android.synthetic.main.list_news_category.view.*
 
 class NewsActivity : BaseActivity() {
 
@@ -25,8 +23,8 @@ class NewsActivity : BaseActivity() {
         setContentView(R.layout.activity_news)
         setupDetailTitle()
         setupFrogoRvCategory()
-        getTopHeadline(NewsConstant.CATEGORY_ENTERTAIMENT) { setupHorizontalAdapter(it) }
-        getTopHeadline(null) { setupVerticalAdapter(it) }
+        getTopHeadline(NewsConstant.CATEGORY_ENTERTAIMENT) { setupFrogoRvHorizontal(it) }
+        getTopHeadline(null) { setupFrogoRvVertical(it) }
 
         supportActionBar?.elevation = 0f
     }
@@ -47,7 +45,7 @@ class NewsActivity : BaseActivity() {
 
         val categoryAdapter = object : FrogoAdapterCallback<String> {
             override fun onItemClicked(data: String) {
-                getTopHeadline(data) { setupVerticalAdapter(it) }
+                getTopHeadline(data) { setupFrogoRvVertical(it) }
                 tv_top_headline.text = "category $data"
             }
 
@@ -62,7 +60,7 @@ class NewsActivity : BaseActivity() {
 
         rv_category.injector<String>()
             .addData(listCategory())
-            .addCustomView(R.layout.content_category)
+            .addCustomView(R.layout.list_news_category)
             .addEmptyView(null)
             .addCallback(categoryAdapter)
             .createLayoutLinearHorizontal(false)
@@ -88,23 +86,21 @@ class NewsActivity : BaseActivity() {
         return newsGeneralAdapterCallback
     }
 
-    private fun setupHorizontalAdapter(data: List<Article>) {
-
+    private fun setupFrogoRvHorizontal(data: List<Article>) {
         rv_news_general.injector<Article>()
             .addData(data)
-            .addCustomView(R.layout.content_article_horizontal)
+            .addCustomView(R.layout.list_news_article_horizontal)
             .addEmptyView(null)
             .addCallback(setupAdapterCallback())
             .createLayoutLinearHorizontal(false)
             .createAdapter()
             .build(rv_news_general)
-
     }
 
-    private fun setupVerticalAdapter(data: List<Article>) {
+    private fun setupFrogoRvVertical(data: List<Article>) {
         rv_news_category.injector<Article>()
             .addData(data)
-            .addCustomView(R.layout.content_article_vertical)
+            .addCustomView(R.layout.list_news_article_vertical)
             .addEmptyView(null)
             .addCallback(setupAdapterCallback())
             .createLayoutLinearVertical(false)

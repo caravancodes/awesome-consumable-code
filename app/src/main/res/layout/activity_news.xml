@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:paddingLeft="@dimen/frogo_rv_dimen_16dp"
-        tools:listitem="@layout/content_article_vertical" />
+        tools:listitem="@layout/list_news_article_vertical" />
 
     <com.frogobox.recycler.FrogoRecyclerView
         android:id="@+id/rv_category"
@@ -25,7 +25,7 @@
         android:layout_below="@id/rv_news_general"
         android:clipToPadding="false"
         android:paddingLeft="@dimen/frogo_rv_dimen_16dp"
-        tools:listitem="@layout/content_article_vertical" />
+        tools:listitem="@layout/list_news_article_vertical" />
 
     <TextView
         android:id="@+id/tv_top_headline"
@@ -47,7 +47,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/tv_top_headline"
         android:clipToPadding="false"
-        tools:listitem="@layout/content_article_vertical" />
+        tools:listitem="@layout/list_news_article_vertical" />
 
     <ProgressBar
         android:id="@+id/progress_view"

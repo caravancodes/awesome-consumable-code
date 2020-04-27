@@ -14,7 +14,7 @@ import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_list_main.view.*
+import kotlinx.android.synthetic.main.list_main.view.*
 
 class MainActivity : BaseActivity() {
 
@@ -53,7 +53,7 @@ class MainActivity : BaseActivity() {
 
         rv_main.injector<Library>()
             .addData(listData())
-            .addCustomView(R.layout.content_list_main)
+            .addCustomView(R.layout.list_main)
             .addEmptyView(null)
             .addCallback(adapterCallback)
             .createLayoutLinearVertical(false)
