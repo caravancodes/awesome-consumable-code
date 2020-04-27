@@ -1,11 +1,13 @@
 package com.frogobox.consumableapps
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.bumptech.glide.Glide
 import com.frogobox.consumableapps.base.BaseActivity
 import com.frogobox.consumableapps.consumable.newsapi.NewsActivity
+import com.frogobox.consumableapps.consumable.themealdbapi.MealActivity
+import com.frogobox.consumableapps.consumable.themoviedbapi.MovieActivity
+import com.frogobox.consumableapps.consumable.thesportdbapi.SportActivity
 import com.frogobox.consumableapps.util.Constant
 import com.frogobox.consumableapps.util.Helper
 import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
@@ -61,38 +63,30 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupIntentActivity(codeActivity: Int, data: Library) {
-        var intent: Intent? = null
         when (codeActivity) {
 
             0 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
+                baseStartActivity<NewsActivity, Library>(Constant.EXTRA_MAIN, data)
             }
             1 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
+                baseStartActivity<MovieActivity, Library>(Constant.EXTRA_MAIN, data)
             }
             2 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
+                baseStartActivity<SportActivity, Library>(Constant.EXTRA_MAIN, data)
             }
             3 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
+                baseStartActivity<MealActivity, Library>(Constant.EXTRA_MAIN, data)
             }
             4 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             5 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             6 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             7 -> {
-                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
         }
 
-        val extraData = Helper.dataToJson(data)
-        intent?.putExtra(Constant.EXTRA_MAIN, extraData)
-        startActivity(intent)
     }
 
 }

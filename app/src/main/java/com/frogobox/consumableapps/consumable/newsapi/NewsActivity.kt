@@ -113,9 +113,7 @@ class NewsActivity : BaseActivity() {
     }
 
     private fun getTopHeadline(category: String?, frogoRvSetup: (data: List<Article>) -> Unit) {
-        val consumeNewsApi = ConsumeNewsApi(NewsUrl.NEWS_API_KEY)
-        consumeNewsApi.usingChuckInterceptor(this)
-        consumeNewsApi.getTopHeadline( // Adding Base Parameter on main function
+        consumeNewsApi().getTopHeadline( // Adding Base Parameter on main function
             null,
             null,
             category,

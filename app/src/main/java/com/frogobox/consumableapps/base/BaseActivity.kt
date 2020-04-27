@@ -1,8 +1,11 @@
 package com.frogobox.consumableapps.base
 
 import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -25,7 +28,14 @@ import com.frogobox.consumableapps.util.Helper
  * com.frogobox.consumableapps.base
  * 
  */
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : BaseConsumeApi() {
+
+    lateinit var mActivity: BaseConsumeApi
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mActivity = this
+    }
 
     protected fun setupDetailActivity(title: String) {
         supportActionBar?.setTitle(title)
@@ -80,6 +90,30 @@ abstract class BaseActivity : AppCompatActivity() {
     protected inline fun <reified Model> baseGetExtraData(extraKey: String): Model {
         val extraIntent = intent.getStringExtra(extraKey)
         return BaseHelper().baseFromJson(extraIntent)
+    }
+
+    protected fun baseStartExplicit(uri: String) {
+        this.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+    }
+
+    protected fun checkExtra(extraKey: String): Boolean {
+        return intent?.hasExtra(extraKey)!!
+    }
+
+    protected fun setupEventEmptyView(view: View, isEmpty: Boolean) {
+        if (isEmpty) {
+            view.visibility = View.VISIBLE
+        } else {
+            view.visibility = View.GONE
+        }
+    }
+
+    protected fun setupEventProgressView(view: View, progress: Boolean) {
+        if (progress) {
+            view.visibility = View.VISIBLE
+        } else {
+            view.visibility = View.GONE
+        }
     }
 
 }
