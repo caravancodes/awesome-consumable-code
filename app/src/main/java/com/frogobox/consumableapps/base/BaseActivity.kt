@@ -7,9 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.frogobox.consumableapps.Library
+import com.frogobox.consumableapps.model.Library
 import com.frogobox.consumableapps.util.Constant
 import com.frogobox.consumableapps.util.Helper
 

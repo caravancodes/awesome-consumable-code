@@ -1,4 +1,4 @@
-package com.frogobox.consumableapps
+package com.frogobox.consumableapps.model
 
 /*
  * Created by Faisal Amir

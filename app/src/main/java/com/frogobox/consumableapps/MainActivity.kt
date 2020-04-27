@@ -8,6 +8,7 @@ import com.frogobox.consumableapps.consumable.newsapi.NewsActivity
 import com.frogobox.consumableapps.consumable.themealdbapi.MealActivity
 import com.frogobox.consumableapps.consumable.themoviedbapi.MovieActivity
 import com.frogobox.consumableapps.consumable.thesportdbapi.SportActivity
+import com.frogobox.consumableapps.model.Library
 import com.frogobox.consumableapps.util.Constant
 import com.frogobox.consumableapps.util.Helper
 import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback

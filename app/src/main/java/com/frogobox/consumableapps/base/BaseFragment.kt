@@ -3,8 +3,10 @@ package com.frogobox.consumableapps.base
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.frogobox.frogothemoviedbapi.ConsumeMovieApi
 
 /**
  * Created by Faisal Amir
@@ -25,11 +27,11 @@ import androidx.fragment.app.Fragment
  */
 open class BaseFragment : Fragment() {
 
-    lateinit var mBaseActivity: BaseActivity
+    lateinit var mActivity: BaseActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBaseActivity = (activity as BaseActivity)
+        mActivity = (activity as BaseActivity)
     }
 
     protected fun setupChildFragment(frameId: Int, fragment: Fragment) {
@@ -54,7 +56,7 @@ open class BaseFragment : Fragment() {
     }
 
     protected fun checkArgument(argsKey: String): Boolean {
-        return arguments!!.containsKey(argsKey)
+        return requireArguments().containsKey(argsKey)
     }
 
     protected fun setupEventEmptyView(view: View, isEmpty: Boolean) {
@@ -89,6 +91,22 @@ open class BaseFragment : Fragment() {
         val extraData = BaseHelper().baseToJson(data)
         intent.putExtra(extraKey, extraData)
         this.startActivity(intent)
+    }
+
+    protected fun consumeMovieApi(): ConsumeMovieApi {
+        return mActivity.consumeMovieApi()
+    }
+
+    protected fun showProgressThread(progressView: ProgressBar) {
+        mActivity.runOnUiThread {
+            progressView.visibility = View.VISIBLE
+        }
+    }
+
+    protected fun hideProgressThread(progressView: ProgressBar) {
+        mActivity.runOnUiThread {
+            progressView.visibility = View.GONE
+        }
     }
 
 }
