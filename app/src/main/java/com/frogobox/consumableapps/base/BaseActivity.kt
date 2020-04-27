@@ -1,9 +1,11 @@
 package com.frogobox.consumableapps.base
 
+import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.frogobox.consumableapps.Library
 import com.frogobox.consumableapps.util.Constant
 import com.frogobox.consumableapps.util.Helper
@@ -52,6 +54,32 @@ abstract class BaseActivity : AppCompatActivity() {
         val getExtraIntent = intent.getStringExtra(Constant.EXTRA_MAIN)
         val extraData = Helper.dataFromJson<Library>(getExtraIntent)
         setupDetailActivity(extraData.name)
+    }
+
+    protected fun setupChildFragment(frameId: Int, fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(frameId, fragment)
+            commit()
+        }
+    }
+
+    protected inline fun <reified ClassActivity> baseStartActivity() {
+        this.startActivity(Intent(this, ClassActivity::class.java))
+    }
+
+    protected inline fun <reified ClassActivity, Model> baseStartActivity(
+        extraKey: String,
+        data: Model
+    ) {
+        val intent = Intent(this, ClassActivity::class.java)
+        val extraData = BaseHelper().baseToJson(data)
+        intent.putExtra(extraKey, extraData)
+        this.startActivity(intent)
+    }
+
+    protected inline fun <reified Model> baseGetExtraData(extraKey: String): Model {
+        val extraIntent = intent.getStringExtra(extraKey)
+        return BaseHelper().baseFromJson(extraIntent)
     }
 
 }
