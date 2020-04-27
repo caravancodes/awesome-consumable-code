@@ -11,11 +11,13 @@ import com.frogobox.frogonewsapi.data.model.Article
 import com.frogobox.frogonewsapi.data.response.ArticleResponse
 import com.frogobox.frogonewsapi.util.NewsConstant
 import com.frogobox.frogonewsapi.util.NewsUrl
-import com.frogobox.recycler.callback.FrogoAdapterCallback
+import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_list_main.view.*
 
 class NewsActivity : BaseActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -53,26 +55,34 @@ class NewsActivity : BaseActivity() {
     }
 
     private fun setupRecyclerView(articles: List<Article>?) {
-        rv_main.isViewLinearVertical(false)
-        rv_main.injectAdapter(
-            R.layout.content_list_main,
-            articles,
-            null,
-            object : FrogoAdapterCallback<Article> {
-                override fun onItemClicked(data: Article) {
-                    
-                }
 
-                override fun onItemLongClicked(data: Article) {
-                    
-                }
+        val frogoadapterCallback = object : FrogoAdapterCallback<Article> {
+            override fun onItemClicked(data: Article) {
+                data.title?.let { showToast(it) }
+            }
 
-                override fun setupInitComponent(view: View, data: Article) {
-                    Glide.with(this@NewsActivity).load(data.urlToImage).into(view.iv_icon)
-                    view.tv_title.text = data.title
-                    view.tv_link.text = data.author
-                }
-            })
+            override fun onItemLongClicked(data: Article) {
+                data.title?.let { showToast(it) }
+            }
+
+            override fun setupInitComponent(view: View, data: Article) {
+                Glide.with(this@NewsActivity).load(data.urlToImage).into(view.iv_icon)
+                view.tv_title.text = data.title
+                view.tv_link.text = data.author
+            }
+        }
+
+        articles?.let {
+            rv_main.injector<Article>()
+                .addData(it)
+                .addCustomView(R.layout.content_list_main)
+                .addEmptyView(null)
+                .addCallback(frogoadapterCallback)
+                .createLayoutLinearVertical(false)
+                .build(rv_main)
+        }
+
+
     }
 
 }

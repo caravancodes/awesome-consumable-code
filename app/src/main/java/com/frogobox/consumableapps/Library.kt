@@ -16,7 +16,7 @@ package com.frogobox.consumableapps
  * 
  */
 data class Library(
-    val image: Int,
+    val image: String,
     val name: String,
     val link: String,
     val code: Int
