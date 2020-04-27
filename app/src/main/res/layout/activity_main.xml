@@ -4,6 +4,7 @@
     android:id="@+id/rv_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/frogoRvColorWhite"
     android:clipToPadding="false"
     android:paddingBottom="@dimen/frogo_rv_dimen_16dp"
     tools:context=".MainActivity">

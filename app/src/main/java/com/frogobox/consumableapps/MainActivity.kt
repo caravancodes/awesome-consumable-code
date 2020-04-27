@@ -6,7 +6,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.frogobox.consumableapps.base.BaseActivity
 import com.frogobox.consumableapps.consumable.newsapi.NewsActivity
-import com.frogobox.consumableapps.consumable.thesportdbapi.SportActivity
+import com.frogobox.consumableapps.util.Constant
 import com.frogobox.consumableapps.util.Helper
 import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
 import com.google.gson.Gson
@@ -36,7 +36,7 @@ class MainActivity : BaseActivity() {
 
         val adapterCallback = object : FrogoAdapterCallback<Library> {
             override fun onItemClicked(data: Library) {
-                setupIntentActivity(data.code)
+                setupIntentActivity(data.code, data)
             }
 
             override fun onItemLongClicked(data: Library) {
@@ -60,33 +60,39 @@ class MainActivity : BaseActivity() {
 
     }
 
-    private fun setupIntentActivity(codeActivity: Int) {
+    private fun setupIntentActivity(codeActivity: Int, data: Library) {
+        var intent: Intent? = null
         when (codeActivity) {
+
             0 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             1 -> {
-                startActivity(Intent(this@MainActivity, SportActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             2 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             3 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             4 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             5 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             6 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
             7 -> {
-                startActivity(Intent(this@MainActivity, NewsActivity::class.java))
+                intent = Intent(this@MainActivity, NewsActivity::class.java)
             }
         }
+
+        val extraData = Helper.dataToJson(data)
+        intent?.putExtra(Constant.EXTRA_MAIN, extraData)
+        startActivity(intent)
     }
 
 }

@@ -12,16 +12,17 @@ import com.frogobox.frogonewsapi.data.response.ArticleResponse
 import com.frogobox.frogonewsapi.util.NewsConstant
 import com.frogobox.frogonewsapi.util.NewsUrl
 import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
-
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_news.*
+import kotlinx.android.synthetic.main.activity_sport.*
 import kotlinx.android.synthetic.main.content_list_main.view.*
 
 class NewsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setupDetailActivity("News Api")
+        setContentView(R.layout.activity_news)
+        setupDetailTitle()
         setupNewsApi()
     }
 
@@ -73,13 +74,14 @@ class NewsActivity : BaseActivity() {
         }
 
         articles?.let {
-            rv_main.injector<Article>()
+            rv_news.injector<Article>()
                 .addData(it)
                 .addCustomView(R.layout.content_list_main)
                 .addEmptyView(null)
                 .addCallback(frogoadapterCallback)
                 .createLayoutLinearVertical(false)
-                .build(rv_main)
+                .createAdapter()
+                .build(rv_news)
         }
 
 

@@ -4,6 +4,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.frogobox.consumableapps.Library
+import com.frogobox.consumableapps.util.Constant
+import com.frogobox.consumableapps.util.Helper
 
 /*
  * Created by Faisal Amir
@@ -43,6 +46,12 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    protected fun setupDetailTitle() {
+        val getExtraIntent = intent.getStringExtra(Constant.EXTRA_MAIN)
+        val extraData = Helper.dataFromJson<Library>(getExtraIntent)
+        setupDetailActivity(extraData.name)
     }
 
 }
