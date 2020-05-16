@@ -11,7 +11,8 @@ import com.frogobox.consumableapps.consumable.thesportdbapi.SportActivity
 import com.frogobox.consumableapps.model.Library
 import com.frogobox.consumableapps.util.Constant
 import com.frogobox.consumableapps.util.Helper
-import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
+import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
+
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
@@ -37,7 +38,7 @@ class MainActivity : BaseActivity() {
 
     private fun setupRecyclerView() {
 
-        val adapterCallback = object : FrogoAdapterCallback<Library> {
+        val adapterCallback = object : FrogoViewAdapterCallback<Library> {
             override fun onItemClicked(data: Library) {
                 setupIntentActivity(data.code, data)
             }
@@ -58,8 +59,7 @@ class MainActivity : BaseActivity() {
             .addEmptyView(null)
             .addCallback(adapterCallback)
             .createLayoutLinearVertical(false)
-            .createAdapter()
-            .build(rv_main)
+            .build()
 
     }
 

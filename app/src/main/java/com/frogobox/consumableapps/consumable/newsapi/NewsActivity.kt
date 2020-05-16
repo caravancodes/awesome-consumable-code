@@ -10,7 +10,7 @@ import com.frogobox.frogonewsapi.callback.NewsResultCallback
 import com.frogobox.frogonewsapi.data.model.Article
 import com.frogobox.frogonewsapi.data.response.ArticleResponse
 import com.frogobox.frogonewsapi.util.NewsConstant
-import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
+import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
 import kotlinx.android.synthetic.main.activity_news.*
 import kotlinx.android.synthetic.main.list_main.view.tv_title
 import kotlinx.android.synthetic.main.list_news_article_vertical.view.*
@@ -43,7 +43,7 @@ class NewsActivity : BaseActivity() {
 
     private fun setupFrogoRvCategory() {
 
-        val categoryAdapter = object : FrogoAdapterCallback<String> {
+        val categoryAdapter = object : FrogoViewAdapterCallback<String> {
             override fun onItemClicked(data: String) {
                 getTopHeadline(data) { setupFrogoRvVertical(it) }
                 tv_top_headline.text = "category $data"
@@ -64,14 +64,13 @@ class NewsActivity : BaseActivity() {
             .addEmptyView(null)
             .addCallback(categoryAdapter)
             .createLayoutLinearHorizontal(false)
-            .createAdapter()
-            .build(rv_category)
+            .build()
 
     }
 
-    private fun setupAdapterCallback(): FrogoAdapterCallback<Article> {
+    private fun setupAdapterCallback(): FrogoViewAdapterCallback<Article> {
 
-        val newsGeneralAdapterCallback = object : FrogoAdapterCallback<Article> {
+        val newsGeneralAdapterCallback = object : FrogoViewAdapterCallback<Article> {
             override fun onItemClicked(data: Article) {}
 
             override fun onItemLongClicked(data: Article) {}
@@ -93,8 +92,7 @@ class NewsActivity : BaseActivity() {
             .addEmptyView(null)
             .addCallback(setupAdapterCallback())
             .createLayoutLinearHorizontal(false)
-            .createAdapter()
-            .build(rv_news_general)
+            .build()
     }
 
     private fun setupFrogoRvVertical(data: List<Article>) {
@@ -104,8 +102,7 @@ class NewsActivity : BaseActivity() {
             .addEmptyView(null)
             .addCallback(setupAdapterCallback())
             .createLayoutLinearVertical(false)
-            .createAdapter()
-            .build(rv_news_category)
+            .build()
     }
 
     private fun getTopHeadline(category: String?, frogoRvSetup: (data: List<Article>) -> Unit) {
