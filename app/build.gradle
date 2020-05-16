@@ -159,7 +159,7 @@ dependencies {
     implementation 'com.github.amirisback:consumable-code-movie-tmdb-api:1.1.2'
 
     // library consumable code the sport db api
-    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.6'
+    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.7'
 
     // library consumable code pixabay api
     implementation 'com.github.amirisback:consumable-code-pixabay-api:1.0.2'
