@@ -5,6 +5,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.frogobox.consumableapps.base.BaseActivity
 import com.frogobox.consumableapps.consumable.newsapi.NewsActivity
+import com.frogobox.consumableapps.consumable.pixabayapi.PixabayActivity
 import com.frogobox.consumableapps.consumable.themealdbapi.MealActivity
 import com.frogobox.consumableapps.consumable.themoviedbapi.MovieActivity
 import com.frogobox.consumableapps.consumable.thesportdbapi.SportActivity
@@ -79,6 +80,7 @@ class MainActivity : BaseActivity() {
                 baseStartActivity<MealActivity, Library>(Constant.EXTRA_MAIN, data)
             }
             4 -> {
+                baseStartActivity<PixabayActivity, Library>(Constant.EXTRA_MAIN, data)
             }
             5 -> {
             }
