@@ -5,6 +5,13 @@ apply plugin: 'kotlin-kapt'
 
 android {
 
+    def versionMajor = 1
+    def versionMinor = 0
+    def versionPatch = 0
+
+    def projectVersionCode = (versionMajor*100) + (versionMinor*10) + (versionPatch*1)
+    def projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
+
     // Declaration app name
     def nameApp = "Consumable Apps"
 
@@ -40,8 +47,8 @@ android {
         applicationId "com.frogobox.consumableapps"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode projectVersionCode
+        versionName projectVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -146,25 +153,27 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
     // library frogo-recycler-view
-    implementation 'com.github.amirisback:frogo-recycler-view:2.2.2'
+    implementation 'com.github.amirisback:frogo-recycler-view:2.2.4'
 
     // library consumable code movie tmdb api
-    implementation 'com.github.amirisback:consumable-code-movie-tmdb-api:1.0.9'
+    implementation 'com.github.amirisback:consumable-code-movie-tmdb-api:1.1.2'
 
     // library consumable code the sport db api
-    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.5'
+    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.6'
 
     // library consumable code pixabay api
-    implementation 'com.github.amirisback:consumable-code-pixabay-api:1.0.1'
+    implementation 'com.github.amirisback:consumable-code-pixabay-api:1.0.2'
 
     // library consumable code the meal db api
-    implementation 'com.github.amirisback:consumable-code-the-meal-db-api:1.0.1'
+    implementation 'com.github.amirisback:consumable-code-the-meal-db-api:1.0.2'
 
     // library consumable code news api
     implementation 'com.github.amirisback:consumable-code-news-api:1.0.3'
 
     // library frogo-admob-helper
     implementation 'com.github.amirisback:frogo-admob-helper:1.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test:runner:1.2.0'
