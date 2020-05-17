@@ -46,6 +46,27 @@ What's New??
 
 
 # Screen Shot Apps
+## Main Apps
+<span align="center"><img width="200px" height="360px" src="docs/image/main/ss_main.png"></span>
+
+## News API
+<span align="center"><img width="200px" height="360px" src="docs/image/news/ss_news_1.png"></span>
+<span align="center"><img width="200px" height="360px" src="docs/image/news/ss_news_2.png"></span>
+<span align="center"><img width="200px" height="360px" src="docs/image/news/ss_news_3.png"></span>
+
+## The Sport DB API
+<span align="center"><img width="200px" height="360px" src="docs/image/sport/ss_sport_1.png"></span>
+
+## The Movie DB API
+<span align="center"><img width="200px" height="360px" src="docs/image/movie/ss_movie_1.png"></span>
+<span align="center"><img width="200px" height="360px" src="docs/image/movie/ss_movie_2.png"></span>
+<span align="center"><img width="200px" height="360px" src="docs/image/movie/ss_movie_3.png"></span>
+
+## The Meal DB API
+<span align="center"><img width="200px" height="360px" src="docs/image/meal/ss_meal_1.png"></span>
+
+## Pixabay API
+<span align="center"><img width="200px" height="360px" src="docs/image/pixabay/ss_pixabay_1.png"></span>
 
 # Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
