@@ -9,9 +9,12 @@ UI Apps, no need to worry about the data, because it's been handled with a libra
 Beautiful ui no more fethcing data, focus on ui
 
 # Using Library
-- frogo-recycler-view - [Click Here](https://github.com/amirisback/frogo-recycler-view)
-- frogo-admob-helper - [Click Here](https://github.com/amirisback/frogo-admob-helper)
+| No | Name       | Language    |Type    | Link                               |
+|----|------------|-------------|--------|------------------------------------|
+| 1. | frogo-recycler-view | Java/Kotlin | UI/Widget | https://github.com/amirisback/frogo-recycler-view  |
+| 2. | frogo-admob-helper | Java/Kotlin | Util | https://github.com/amirisback/frogo-admob-helper |
 
+# Consumable Library Index 
 | No | Name       | Language    |Type    | Link                               |
 |----|------------|-------------|--------|------------------------------------|
 | 1. | consumable-code-news-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-news-api |
