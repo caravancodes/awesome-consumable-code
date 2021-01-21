@@ -9,18 +9,20 @@ UI Apps, no need to worry about the data, because it's been handled with a libra
 Beautiful ui no more fethcing data, focus on ui
 
 # Using Library
-- frogo-recycler-view - https://github.com/amirisback/frogo-recycler-view   
-- frogo-admob-helper - https://github.com/amirisback/frogo-admob-helper
+- frogo-recycler-view - [Click Here](https://github.com/amirisback/frogo-recycler-view)
+- frogo-admob-helper - [Click Here](https://github.com/amirisback/frogo-admob-helper)
 
-# Consumable Library Index 
-- consumable-code-news-api - https://github.com/amirisback/consumable-code-news-api
-- consumable-code-the-sport-db-api - https://github.com/amirisback/consumable-code-the-sport-db-api
-- consumable-code-movie-tmdb-api - https://github.com/amirisback/consumable-code-movie-tmdb-api
-- consumable-code-pixabay-api - https://github.com/amirisback/consumable-code-pixabay-api
-- consumable-code-the-meal-db-api - https://github.com/amirisback/consumable-code-the-meal-db-api
-- consumable-code-the-cocktail-db-api - https://github.com/amirisback/consumable-code-the-cocktail-db-api
-- consumable-code-the-audio-db-api - https://github.com/amirisback/consumable-code-the-audio-db-api
-- consumable-code-covid-19-api - https://github.com/amirisback/consumable-code-covid-19-api
+| No | Name       | Language    |Type    | Link                               |
+|----|------------|-------------|--------|------------------------------------|
+| 1. | consumable-code-news-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-news-api |
+| 2. | consumable-code-the-sport-db-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-sport-db-api |
+| 3. | consumable-code-movie-tmdb-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-movie-tmdb-api |
+| 4. | consumable-code-pixabay-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-pixabay-api |
+| 5. | consumable-code-the-meal-db-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-meal-db-api |
+| 6. | consumable-code-the-cocktail-db-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-cocktail-db-api |
+| 7. | consumable-code-the-audio-db-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-audio-db-api |
+| 8. | consumable-code-covid-19-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-covid-19-api |
+
 
 # Android Library Version (build.gradle)
 - ext.kotlin_version = '1.3.71'
