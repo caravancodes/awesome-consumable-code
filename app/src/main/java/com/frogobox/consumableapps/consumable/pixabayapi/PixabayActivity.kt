@@ -8,7 +8,7 @@ import com.frogobox.consumableapps.base.BaseActivity
 import com.frogobox.frogopixabayapi.callback.PixabayResultCallback
 import com.frogobox.frogopixabayapi.data.model.PixabayImage
 import com.frogobox.frogopixabayapi.data.response.Response
-import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
+import com.frogobox.recycler.core.IFrogoViewAdapter
 import kotlinx.android.synthetic.main.activity_pixabay.*
 import kotlinx.android.synthetic.main.list_pixabay.view.*
 
@@ -62,11 +62,11 @@ class PixabayActivity : BaseActivity() {
     }
 
     private fun setupFrogoRecyclerView(data: List<PixabayImage>) {
-        frogo_rv_pixabay.injector<PixabayImage>()
+        frogo_pixabay.injector<PixabayImage>()
             .addData(data)
             .addCustomView(R.layout.list_pixabay)
             .addEmptyView(null)
-            .addCallback(object : FrogoViewAdapterCallback<PixabayImage> {
+            .addCallback(object : IFrogoViewAdapter<PixabayImage> {
                 override fun onItemClicked(data: PixabayImage) {}
 
                 override fun onItemLongClicked(data: PixabayImage) {}

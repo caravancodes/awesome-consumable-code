@@ -8,7 +8,7 @@ import com.frogobox.consumableapps.base.BaseActivity
 import com.frogobox.frogothemealdbapi.callback.MealResultCallback
 import com.frogobox.frogothemealdbapi.data.model.Meal
 import com.frogobox.frogothemealdbapi.data.response.MealResponse
-import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
+import com.frogobox.recycler.core.IFrogoViewAdapter
 import kotlinx.android.synthetic.main.activity_meal.*
 import kotlinx.android.synthetic.main.list_meal.view.*
 
@@ -48,11 +48,11 @@ class MealActivity : BaseActivity() {
     }
 
     private fun setupFrogoRecyclerView(data: List<Meal>) {
-        frogo_rv_meal.injector<Meal>()
+        frogo_meal.injector<Meal>()
             .addData(data)
             .addCustomView(R.layout.list_meal)
             .addEmptyView(null)
-            .addCallback(object : FrogoViewAdapterCallback<Meal> {
+            .addCallback(object : IFrogoViewAdapter<Meal> {
                 override fun onItemClicked(data: Meal) {
 
                 }

@@ -11,7 +11,7 @@ import com.frogobox.frogothemoviedbapi.callback.MovieResultCallback
 import com.frogobox.frogothemoviedbapi.data.model.TrendingPerson
 import com.frogobox.frogothemoviedbapi.data.response.Trending
 import com.frogobox.frogothemoviedbapi.util.MovieUrl
-import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
+import com.frogobox.recycler.core.IFrogoViewAdapter
 
 import kotlinx.android.synthetic.main.list_movie.view.*
 import kotlinx.android.synthetic.main.fragment_movie_trending_child.*
@@ -53,7 +53,7 @@ class TrendingPersonWeekFragment : BaseFragment() {
     }
 
     private fun setupAdapter(data: List<TrendingPerson>) {
-        val adapterCallback = object : FrogoViewAdapterCallback<TrendingPerson> {
+        val adapterCallback = object : IFrogoViewAdapter<TrendingPerson> {
             override fun onItemClicked(data: TrendingPerson) {
                 data.name?.let { showToast(it) }
             }

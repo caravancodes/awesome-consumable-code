@@ -12,7 +12,7 @@ import com.frogobox.frogothesportdbapi.data.model.Country
 import com.frogobox.frogothesportdbapi.data.model.Sport
 import com.frogobox.frogothesportdbapi.data.response.Countrys
 import com.frogobox.frogothesportdbapi.data.response.Sports
-import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
+import com.frogobox.recycler.core.IFrogoViewAdapter
 import kotlinx.android.synthetic.main.activity_sport.*
 import kotlinx.android.synthetic.main.list_news_category.view.*
 
@@ -82,7 +82,7 @@ class SportActivity : BaseActivity() {
             .addData(data)
             .addCustomView(R.layout.list_sports_category)
             .addEmptyView(null)
-            .addCallback(object : FrogoViewAdapterCallback<Sport> {
+            .addCallback(object : IFrogoViewAdapter<Sport> {
                 override fun onItemClicked(data: Sport) {
                     data.strSport?.let { consumeSearchLeagues(it) }
                 }
@@ -103,16 +103,16 @@ class SportActivity : BaseActivity() {
             .addData(data)
             .addCustomView(R.layout.frogo_rv_list_type_6)
             .addEmptyView(null)
-            .addCallback(object : FrogoViewAdapterCallback<Country> {
+            .addCallback(object : IFrogoViewAdapter<Country> {
                 override fun onItemClicked(data: Country) {}
 
                 override fun onItemLongClicked(data: Country) {}
 
                 override fun setupInitComponent(view: View, data: Country) {
-                    val tvTitle = view.findViewById<TextView>(R.id.frogo_rv_type_6_tv_title)
-                    val tvSubTitle = view.findViewById<TextView>(R.id.frogo_rv_type_6_tv_subtitle)
-                    val tvDesc = view.findViewById<TextView>(R.id.frogo_rv_type_6_tv_description)
-                    val ivPoster = view.findViewById<ImageView>(R.id.frogo_rv_type_6_iv_poster)
+                    val tvTitle = view.findViewById<TextView>(R.id.frogo_rv_list_type_6_tv_title)
+                    val tvSubTitle = view.findViewById<TextView>(R.id.frogo_rv_list_type_6_tv_subtitle)
+                    val tvDesc = view.findViewById<TextView>(R.id.frogo_rv_list_type_6_tv_desc)
+                    val ivPoster = view.findViewById<ImageView>(R.id.frogo_rv_list_type_6_iv_poster)
 
                     Glide.with(view.context).load(data.strBadge).into(ivPoster)
                     tvTitle.text = data.strLeague
