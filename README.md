@@ -1,20 +1,20 @@
-# Consumable Apps By AmirIsBack
-- v1.0.0 - Development
+## Consumable Apps By AmirIsBack
+- v2.0.0 - Development
 - Stable Version
 
-# About This Project
+## About This Project
 UI Apps, no need to worry about the data, because it's been handled with a library
 
-# Special From This Project
+## Special From This Project
 Beautiful ui no more fethcing data, focus on ui
 
-# Using Library
+## Using Library
 | No | Name       | Language    |Type    | Link                               |
 |----|------------|-------------|--------|------------------------------------|
 | 1. | frogo-recycler-view | Java/Kotlin | UI/Widget | https://github.com/amirisback/frogo-recycler-view  |
 | 2. | frogo-admob-helper | Java/Kotlin | Util | https://github.com/amirisback/frogo-admob-helper |
 
-# Consumable Library Index 
+## Consumable Library Index
 | No | Name       | Language    |Type    | Link                               |
 |----|------------|-------------|--------|------------------------------------|
 | 1. | consumable-code-news-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-news-api |
@@ -26,21 +26,13 @@ Beautiful ui no more fethcing data, focus on ui
 | 7. | consumable-code-the-audio-db-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-audio-db-api |
 | 8. | consumable-code-covid-19-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-covid-19-api |
 
-
-# Android Library Version (build.gradle)
-- ext.kotlin_version = '1.3.71'
-- classpath 'com.android.tools.build:gradle:3.6.1'
-- compileSdkVersion 29
-- buildToolsVersion "29.0.3"
-- minSdkVersion 21
-
-# Automatically Using This Permission
+## Automatically Using This Permission
     
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 
-# Version Release
+## Version Release
 This Is Latest Release
 
     $version_release = Development mode
@@ -50,30 +42,30 @@ What's New??
     * Development *
 
 
-# Screen Shot Apps
-## Main Apps
+## Screen Shot Apps
+### Main Apps
 <span align="center"><img width="200px" height="360px" src="docs/image/main/ss_main.png"></span>
 
-## News API
+### News API
 <span align="center"><img width="200px" height="360px" src="docs/image/news/ss_news_1.png"></span>
 <span align="center"><img width="200px" height="360px" src="docs/image/news/ss_news_2.png"></span>
 <span align="center"><img width="200px" height="360px" src="docs/image/news/ss_news_3.png"></span>
 
-## The Sport DB API
+### The Sport DB API
 <span align="center"><img width="200px" height="360px" src="docs/image/sport/ss_sport_1.png"></span>
 
-## The Movie DB API
+### The Movie DB API
 <span align="center"><img width="200px" height="360px" src="docs/image/movie/ss_movie_1.png"></span>
 <span align="center"><img width="200px" height="360px" src="docs/image/movie/ss_movie_2.png"></span>
 <span align="center"><img width="200px" height="360px" src="docs/image/movie/ss_movie_3.png"></span>
 
-## The Meal DB API
+### The Meal DB API
 <span align="center"><img width="200px" height="360px" src="docs/image/meal/ss_meal_1.png"></span>
 
-## Pixabay API
+### Pixabay API
 <span align="center"><img width="200px" height="360px" src="docs/image/pixabay/ss_pixabay_1.png"></span>
 
-# Colaborator
+## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
 - Mail To faisalamircs@gmail.com
@@ -87,7 +79,7 @@ Name Of Contribute
 
 Waiting for your contribute
 
-# Attention !!!
+## Attention !!!
 Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
 - If you like this library, please help me / you can donate to buy patreon services
