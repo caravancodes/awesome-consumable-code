@@ -17,26 +17,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="@dimen/frogo_rv_dimen_4dp"
-    android:layout_marginBottom="@dimen/frogo_rv_dimen_4dp"
-    android:background="@drawable/frogo_rv_bg_card_8dp"
-    android:elevation="@dimen/frogo_rv_dimen_2dp"
+    android:layout_marginEnd="@dimen/frogo_dimen_4dp"
+    android:layout_marginBottom="@dimen/frogo_dimen_4dp"
+    android:background="@drawable/frogo_bg_card_8dp"
+    android:elevation="@dimen/frogo_dimen_2dp"
     android:orientation="vertical">
 
     <ImageView
         android:scaleType="centerCrop"
         android:id="@+id/iv_pixabay_poster"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/frogo_rv_dimen_200dp"
-        android:src="@color/frogoRvColorBlack" />
+        android:layout_height="@dimen/frogo_dimen_200dp"
+        android:src="@color/frogoColorBlack" />
 
     <TextView
         android:id="@+id/tv_pixabay_text_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/frogo_rv_dimen_16dp"
-        android:layout_marginTop="@dimen/frogo_rv_dimen_8dp"
-        android:layout_marginEnd="@dimen/frogo_rv_dimen_16dp"
+        android:layout_marginStart="@dimen/frogo_dimen_16dp"
+        android:layout_marginTop="@dimen/frogo_dimen_8dp"
+        android:layout_marginEnd="@dimen/frogo_dimen_16dp"
         android:maxLines="1"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
@@ -46,9 +46,9 @@
         android:id="@+id/tv_pixabay_text_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/frogo_rv_dimen_16dp"
-        android:layout_marginEnd="@dimen/frogo_rv_dimen_16dp"
-        android:layout_marginBottom="@dimen/frogo_rv_dimen_8dp"
+        android:layout_marginStart="@dimen/frogo_dimen_16dp"
+        android:layout_marginEnd="@dimen/frogo_dimen_16dp"
+        android:layout_marginBottom="@dimen/frogo_dimen_8dp"
         tools:text="@string/app_name" />
 
 </LinearLayout>

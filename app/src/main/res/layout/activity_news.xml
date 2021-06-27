@@ -3,28 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/frogoRvColorWhite">
+    android:background="@color/frogoColorWhite">
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/frogo_rv_dimen_100dp"
+        android:layout_height="@dimen/frogo_dimen_100dp"
         android:background="@color/colorPrimary" />
 
-    <com.frogobox.recycler.FrogoRecyclerView
+    <com.frogobox.recycler.widget.FrogoRecyclerView
         android:id="@+id/rv_news_general"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        android:paddingLeft="@dimen/frogo_rv_dimen_16dp"
+        android:paddingLeft="@dimen/frogo_dimen_16dp"
         tools:listitem="@layout/list_news_article_vertical" />
 
-    <com.frogobox.recycler.FrogoRecyclerView
+    <com.frogobox.recycler.widget.FrogoRecyclerView
         android:id="@+id/rv_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rv_news_general"
         android:clipToPadding="false"
-        android:paddingLeft="@dimen/frogo_rv_dimen_16dp"
+        android:paddingLeft="@dimen/frogo_dimen_16dp"
         tools:listitem="@layout/list_news_article_vertical" />
 
     <TextView
@@ -32,16 +32,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rv_category"
-        android:layout_marginStart="@dimen/frogo_rv_dimen_16dp"
-        android:layout_marginEnd="@dimen/frogo_rv_dimen_16dp"
-        android:layout_marginBottom="@dimen/frogo_rv_dimen_16dp"
+        android:layout_marginStart="@dimen/frogo_dimen_16dp"
+        android:layout_marginEnd="@dimen/frogo_dimen_16dp"
+        android:layout_marginBottom="@dimen/frogo_dimen_16dp"
         android:text="News Today"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <com.frogobox.recycler.FrogoRecyclerView
+    <com.frogobox.recycler.widget.FrogoRecyclerView
         android:id="@+id/rv_news_category"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

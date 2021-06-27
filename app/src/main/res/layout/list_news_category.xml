@@ -20,22 +20,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/frogo_rv_dimen_8dp"
-    android:layout_marginEnd="@dimen/frogo_rv_dimen_16dp"
-    android:layout_marginBottom="@dimen/frogo_rv_dimen_16dp"
-    android:background="@drawable/frogo_rv_bg_card_16dp"
-    android:elevation="@dimen/frogo_rv_dimen_2dp"
-    android:paddingStart="@dimen/frogo_rv_dimen_16dp"
-    android:paddingTop="@dimen/frogo_rv_dimen_8dp"
-    android:paddingEnd="@dimen/frogo_rv_dimen_16dp"
-    android:paddingBottom="@dimen/frogo_rv_dimen_8dp">
+    android:layout_marginTop="@dimen/frogo_dimen_8dp"
+    android:layout_marginEnd="@dimen/frogo_dimen_16dp"
+    android:layout_marginBottom="@dimen/frogo_dimen_16dp"
+    android:background="@drawable/frogo_bg_card_16dp"
+    android:elevation="@dimen/frogo_dimen_2dp"
+    android:paddingStart="@dimen/frogo_dimen_16dp"
+    android:paddingTop="@dimen/frogo_dimen_8dp"
+    android:paddingEnd="@dimen/frogo_dimen_16dp"
+    android:paddingBottom="@dimen/frogo_dimen_8dp">
 
     <TextView
         android:id="@+id/tv_category"
         android:textAllCaps="true"
-        android:textColor="@color/frogoRvColorBlack"
+        android:textColor="@color/frogoColorBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/frogo_rv_is_empty_data" />
+        android:text="@string/frogo_is_empty_data" />
 
 </LinearLayout>

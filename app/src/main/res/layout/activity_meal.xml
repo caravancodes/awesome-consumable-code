@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/frogoRvColorWhite"
+    android:background="@color/frogoColorWhite"
     tools:context=".consumable.themealdbapi.MealActivity">
 
-    <com.frogobox.recycler.FrogoRecyclerView
-        android:id="@+id/frogo_rv_meal"
+    <com.frogobox.recycler.widget.FrogoRecyclerView
+        android:id="@+id/frogo_meal"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        android:paddingLeft="@dimen/frogo_rv_dimen_4dp"
-        android:paddingTop="@dimen/frogo_rv_dimen_4dp"
+        android:paddingLeft="@dimen/frogo_dimen_4dp"
+        android:paddingTop="@dimen/frogo_dimen_4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

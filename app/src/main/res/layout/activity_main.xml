@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.frogobox.recycler.FrogoRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.frogobox.recycler.widget.FrogoRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rv_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/frogoRvColorWhite"
+    android:background="@color/frogoColorWhite"
     android:clipToPadding="false"
-    android:paddingBottom="@dimen/frogo_rv_dimen_16dp"
+    android:paddingBottom="@dimen/frogo_dimen_16dp"
     tools:context=".MainActivity">
 
 
-</com.frogobox.recycler.FrogoRecyclerView>
+</com.frogobox.recycler.widget.FrogoRecyclerView>
