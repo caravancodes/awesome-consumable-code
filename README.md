@@ -23,8 +23,7 @@ Beautiful ui no more fethcing data, focus on ui
 | 4. | consumable-code-pixabay-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-pixabay-api |
 | 5. | consumable-code-the-meal-db-api | Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-meal-db-api |
 | 6. | consumable-code-the-cocktail-db-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-cocktail-db-api |
-| 7. | consumable-code-the-audio-db-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-the-audio-db-api |
-| 8. | consumable-code-covid-19-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-covid-19-api |
+| 7. | consumable-code-covid-19-api| Java/Kotlin | Data | https://github.com/amirisback/consumable-code-covid-19-api |
 
 ## Automatically Using This Permission
     
