@@ -1,6 +1,11 @@
-## Consumable Apps By AmirIsBack
+![ScreenShoot Apps](https://raw.githubusercontent.com/amirisback/amirisback/master/docs/image/deprecated.png?raw=true)
+
+## Consumable Apps
 - v2.0.0 - Development
 - Stable Version
+
+## Attention Please :bangbang:
+Please use frogo-consume-api [Click Here](https://github.com/frogobox/frogo-consume-api) to get the latest updates
 
 ## About This Project
 UI Apps, no need to worry about the data, because it's been handled with a library
